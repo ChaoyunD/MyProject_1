@@ -216,6 +216,8 @@ int WriteNullSequence(ITCAST_ANYBUF **pOutData);
 // pData编码为ITCAST_ANYBUF(有malloc动作), 将新的ITCAST_ANYBUF节点地址赋值给outBuf
 int EncodeChar(char *pData, int dataLen, ITCAST_ANYBUF **outBuf);
 
+
+
 // 同 EncodeChar 函数
 int EncodeUnsignedChar(unsigned char *pData, int dataLen, ITCAST_ANYBUF **outBuf);
 
