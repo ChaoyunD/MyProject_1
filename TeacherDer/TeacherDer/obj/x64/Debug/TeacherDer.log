@@ -1,0 +1,11 @@
+﻿  Validating architecture
+  Validating sources
+  Copying sources remotely to '192.168.42.133'
+  Starting remote build
+  Compiling sources:
+  itcastderlog.c
+  itcast_asn1_der.c
+  main.c
+  teacher.c
+  Linking objects
+  TeacherDer.vcxproj -> D:\Users\Administrator\Desktop\项目1\项目1第4天\预习\TeacherDer\TeacherDer\bin\x64\Debug\TeacherDer.out

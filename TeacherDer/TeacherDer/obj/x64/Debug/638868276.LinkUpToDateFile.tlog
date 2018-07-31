@@ -1,0 +1,1 @@
+g++ -o "/root/projects/TeacherDer/bin/x64/Debug/TeacherDer.out" -Wl,--no-undefined -Wl,-z,relro -Wl,-z,now -Wl,-z,noexecstack /root/projects/TeacherDer/obj/x64/Debug/itcastderlog.o /root/projects/TeacherDer/obj/x64/Debug/itcast_asn1_der.o /root/projects/TeacherDer/obj/x64/Debug/main.o /root/projects/TeacherDer/obj/x64/Debug/teacher.o

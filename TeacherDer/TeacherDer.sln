@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2042
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TeacherDer", "TeacherDer\TeacherDer.vcxproj", "{C5300737-F085-4C11-9E0C-8F02EAEB879C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|ARM = Debug|ARM
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|ARM = Release|ARM
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C5300737-F085-4C11-9E0C-8F02EAEB879C}.Debug|ARM.ActiveCfg = Debug|ARM
+		{C5300737-F085-4C11-9E0C-8F02EAEB879C}.Debug|ARM.Build.0 = Debug|ARM
+		{C5300737-F085-4C11-9E0C-8F02EAEB879C}.Debug|x64.ActiveCfg = Debug|x64
+		{C5300737-F085-4C11-9E0C-8F02EAEB879C}.Debug|x64.Build.0 = Debug|x64
+		{C5300737-F085-4C11-9E0C-8F02EAEB879C}.Debug|x86.ActiveCfg = Debug|x86
+		{C5300737-F085-4C11-9E0C-8F02EAEB879C}.Debug|x86.Build.0 = Debug|x86
+		{C5300737-F085-4C11-9E0C-8F02EAEB879C}.Release|ARM.ActiveCfg = Release|ARM
+		{C5300737-F085-4C11-9E0C-8F02EAEB879C}.Release|ARM.Build.0 = Release|ARM
+		{C5300737-F085-4C11-9E0C-8F02EAEB879C}.Release|x64.ActiveCfg = Release|x64
+		{C5300737-F085-4C11-9E0C-8F02EAEB879C}.Release|x64.Build.0 = Release|x64
+		{C5300737-F085-4C11-9E0C-8F02EAEB879C}.Release|x86.ActiveCfg = Release|x86
+		{C5300737-F085-4C11-9E0C-8F02EAEB879C}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {65FF8F17-CC23-4768-B283-4DBA3E4D0287}
+	EndGlobalSection
+EndGlobal
