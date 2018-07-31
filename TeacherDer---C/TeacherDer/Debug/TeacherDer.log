@@ -1,9 +1,0 @@
-﻿  itcastderlog.c
-d:\users\administrator\desktop\项目1\项目1第3天\预习\预习代码\teacherder---c\teacherder\itcastderlog.c(45): warning C4013: “open”未定义；假设外部返回 int
-d:\users\administrator\desktop\项目1\项目1第3天\预习\预习代码\teacherder---c\teacherder\itcastderlog.c(105): warning C4013: “write”未定义；假设外部返回 int
-d:\users\administrator\desktop\项目1\项目1第3天\预习\预习代码\teacherder---c\teacherder\itcastderlog.c(109): warning C4013: “close”未定义；假设外部返回 int
-  itcast_asn1_der.c
-  main.c
-  teacher.c
-  正在生成代码...
-  TeacherDer.vcxproj -> D:\Users\Administrator\Desktop\项目1\项目1第3天\预习\预习代码\TeacherDer---C\Debug\TeacherDer.exe
