@@ -43,7 +43,7 @@ int ItcastLog::ITCAST_Error_OpenFile(int *pf)
 	char	fileName[1024];
 	memset(fileName, 0, sizeof(fileName));
 
-#ifdef WIN32
+#ifdef WIN32//win下写log
 	sprintf(fileName, "d:\\%s", ITCAST_DEBUG_FILE.data());
 #else
 	sprintf(fileName, "./log/%s", ITCAST_DEBUG_FILE.data());

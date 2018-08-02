@@ -6,4 +6,7 @@ d:\users\administrator\desktop\git_project\project1_c++\project1_c++\baseasn1.cp
 d:\users\administrator\desktop\git_project\project1_c++\project1_c++\baseasn1.cpp(796): warning C4244: “初始化”: 从“const ITCAST_UINT32”转换到“ITCAST_UINT8”，可能丢失数据
 d:\users\administrator\desktop\git_project\project1_c++\project1_c++\baseasn1.cpp(817): warning C4244: “=”: 从“ITCAST_UINT32”转换到“ITCAST_UINT8”，可能丢失数据
 d:\users\administrator\desktop\git_project\project1_c++\project1_c++\baseasn1.cpp(1017): warning C4244: “初始化”: 从“const ITCAST_UINT32”转换到“ITCAST_UINT8”，可能丢失数据
+  SequenceASN1.cpp
+  main.cpp
+  正在生成代码...
   project1_c++.vcxproj -> D:\Users\Administrator\Desktop\git_project\project1_c++\Debug\project1_c++.exe

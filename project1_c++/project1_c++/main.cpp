@@ -1,6 +1,7 @@
 ﻿#include "BaseASN1.h"
 #include "ItcastLog.h"
 #include "SequenceASN1.h"
+#include "Codec.h"
 typedef struct _Teacher
 {
 	char name[64];

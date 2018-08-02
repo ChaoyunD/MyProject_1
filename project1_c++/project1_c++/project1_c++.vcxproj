@@ -123,6 +123,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="BaseASN1.h" />
+    <ClInclude Include="Codec.h" />
     <ClInclude Include="ItcastLog.h" />
     <ClInclude Include="SequenceASN1.h" />
   </ItemGroup>
