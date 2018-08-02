@@ -1,4 +1,4 @@
-#include "teacher.h"
+ï»¿#include "teacher.h"
 #include "itcast_asn1_der.h"
 #include <stdio.h>
 #include <stdlib.h>
@@ -18,25 +18,25 @@ int encodeTeacher(Teacher * p, char ** outData, int * outlen)
 	ITCAST_ANYBUF* temp = NULL;
 	ITCAST_ANYBUF* head = NULL;
 	ITCAST_ANYBUF* next = NULL;
-	// 1. ½«name±àÂë -> char*
+	// 1. å°†nameç¼–ç  -> char*
 	// char* -> ITCAST_ANYBUF
 	DER_ITCAST_String_To_AnyBuf(&temp, p->name, strlen(p->name)+1);
 	DER_ItAsn1_WritePrintableString(temp, &head);
 	DER_ITCAST_FreeQueue(temp);
-	// 2. age±àÂë
+	// 2. ageç¼–ç 
 	DER_ItAsn1_WriteInteger(p->age, &head->next);
-	// 3. p±àÂë
+	// 3. pç¼–ç 
 	next = head->next;
 	EncodeChar(p->p, strlen(p->p) + 1, &next->next);
-	// 4. plen±àÂë
+	// 4. plenç¼–ç 
 	next = next->next;
 	DER_ItAsn1_WriteInteger(p->plen, &next->next);
-	// 5. Õû¸öÁ´±í±àÂë
+	// 5. æ•´ä¸ªé“¾è¡¨ç¼–ç 
 	DER_ItAsn1_WriteSequence(head, &temp);
-	// 6. ´«³ö²ÎÊı¸³Öµ
+	// 6. ä¼ å‡ºå‚æ•°èµ‹å€¼
 	*outData = temp->pData;
 	*outlen = temp->dataLen;
-	// 7. ÊÍ·ÅÄÚ´æ - ÊÍ·ÅÁ´±í
+	// 7. é‡Šæ”¾å†…å­˜ - é‡Šæ”¾é“¾è¡¨
 	DER_ITCAST_FreeQueue(head);
 
 	return 0;
@@ -61,33 +61,33 @@ int decodeTeacher(char * inData, int inLen, Teacher ** p)
 
 	// 1. char* -> ITCAST_ANYBUF
 	DER_ITCAST_String_To_AnyBuf(&temp, inData, inLen);
-	// 2. ITCAST_ANYBUF -> »¹Ô­³ÉÒ»Á´±í, µÃµ½ÁËÒ»¸ö²Ù×÷µÄÍ·½áµã
+	// 2. ITCAST_ANYBUF -> è¿˜åŸæˆä¸€é“¾è¡¨, å¾—åˆ°äº†ä¸€ä¸ªæ“ä½œçš„å¤´ç»“ç‚¹
 	DER_ItAsn1_ReadSequence(temp, &head);
 	DER_ITCAST_FreeQueue(temp);
-	// 3. ½âÂëname
+	// 3. è§£ç name
 	DER_ItAsn1_ReadPrintableString(head, &temp);
 	memcpy(pt->name, temp->pData, temp->dataLen);
 	DER_ITCAST_FreeQueue(temp);
 
-	// 4. ½âÂëage
+	// 4. è§£ç age
 	next = head->next;
 	DER_ItAsn1_ReadInteger(next, &pt->age);
 
-	// 5. ½âÂëp
+	// 5. è§£ç p
 	next = next->next;
 	DER_ItAsn1_ReadPrintableString(next, &temp);
 	pt->p = (char*)malloc(temp->dataLen);
 	strcpy(pt->p, temp->pData);
 	DER_ITCAST_FreeQueue(temp);
 
-	// 6. ½âÂëplen
+	// 6. è§£ç plen
 	next = next->next;
 	DER_ItAsn1_ReadInteger(next, &pt->plen);
 
-	// 7. ´«³ö²ÎÊı¸³Öµ
+	// 7. ä¼ å‡ºå‚æ•°èµ‹å€¼
 	*p = pt;
 
-	// 8. ÊÍ·ÅÄÚ´æ
+	// 8. é‡Šæ”¾å†…å­˜
 	DER_ITCAST_FreeQueue(head);
 
 	return 0;
