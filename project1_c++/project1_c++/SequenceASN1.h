@@ -16,10 +16,12 @@ public:
     int writeNextNode(char* sValue, int len);
 
     // 读头结点数据
+	int readHeadNode(char **sValue);//针对的是类或结构体中的char*(未申请内存)
     int readHeadNode(int &iValue);
-    int readHeadNode(char* sValue);
+    int readHeadNode(char* sValue);//针对的是类或结构体中的char[](已申请内存)
     // 读后继结点数据
     int readNextNode(int &iValue);
+	int readNextNode(long &iValue);
     int readNextNode(char** sValue);//针对的是类或结构体中的char*(未申请内存)
 	int readNextNode(char* sValue);//针对的是类或结构体中的char[](已申请内存)
 

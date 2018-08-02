@@ -1,2 +1,9 @@
-﻿  main.cpp
-  project1_c++.vcxproj -> D:\Users\Administrator\Desktop\项目1\项目1第3天\ing\project1_c++\Debug\project1_c++.exe
+﻿  BaseASN1.cpp
+d:\users\administrator\desktop\git_project\project1_c++\project1_c++\baseasn1.cpp(360): warning C4244: “=”: 从“ITCAST_UINT32”转换到“ITCAST_UINT8”，可能丢失数据
+d:\users\administrator\desktop\git_project\project1_c++\project1_c++\baseasn1.cpp(374): warning C4244: “=”: 从“ITCAST_UINT32”转换到“ITCAST_UINT8”，可能丢失数据
+d:\users\administrator\desktop\git_project\project1_c++\project1_c++\baseasn1.cpp(494): warning C4244: “初始化”: 从“const ITCAST_UINT32”转换到“ITCAST_UINT8”，可能丢失数据
+d:\users\administrator\desktop\git_project\project1_c++\project1_c++\baseasn1.cpp(577): warning C4244: “初始化”: 从“const ITCAST_UINT32”转换到“ITCAST_UINT8”，可能丢失数据
+d:\users\administrator\desktop\git_project\project1_c++\project1_c++\baseasn1.cpp(796): warning C4244: “初始化”: 从“const ITCAST_UINT32”转换到“ITCAST_UINT8”，可能丢失数据
+d:\users\administrator\desktop\git_project\project1_c++\project1_c++\baseasn1.cpp(817): warning C4244: “=”: 从“ITCAST_UINT32”转换到“ITCAST_UINT8”，可能丢失数据
+d:\users\administrator\desktop\git_project\project1_c++\project1_c++\baseasn1.cpp(1017): warning C4244: “初始化”: 从“const ITCAST_UINT32”转换到“ITCAST_UINT8”，可能丢失数据
+  project1_c++.vcxproj -> D:\Users\Administrator\Desktop\git_project\project1_c++\Debug\project1_c++.exe
