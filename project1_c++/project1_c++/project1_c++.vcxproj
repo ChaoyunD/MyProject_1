@@ -117,14 +117,24 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="BaseASN1.cpp" />
+    <ClCompile Include="CodecFactory.cpp" />
     <ClCompile Include="ItcastLog.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="RequestCodec.cpp" />
+    <ClCompile Include="RequestFactory.cpp" />
+    <ClCompile Include="RespondCodec.cpp" />
+    <ClCompile Include="RespondFactory.cpp" />
     <ClCompile Include="SequenceASN1.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="BaseASN1.h" />
     <ClInclude Include="Codec.h" />
+    <ClInclude Include="CodecFactory.h" />
     <ClInclude Include="ItcastLog.h" />
+    <ClInclude Include="RequestCodec.h" />
+    <ClInclude Include="RequestFactory.h" />
+    <ClInclude Include="RespondCodec.h" />
+    <ClInclude Include="RespondFactory.h" />
     <ClInclude Include="SequenceASN1.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

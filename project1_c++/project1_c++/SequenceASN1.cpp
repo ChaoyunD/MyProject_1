@@ -131,5 +131,13 @@ int SequenceASN1::unpackSequence(char * inData, int inLen)
 
 void SequenceASN1::freeSequence(ITCAST_ANYBUF * node)
 {
-	DER_ITCAST_FreeQueue(node);
-}
+	if (node == NULL)
+	{
+		DER_ITCAST_FreeQueue(m_header);
+	}
+	else
+	{
+		DER_ITCAST_FreeQueue(node);
+	}
+	}
+	

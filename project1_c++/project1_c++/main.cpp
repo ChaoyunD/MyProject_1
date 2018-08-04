@@ -1,55 +1,41 @@
 ﻿#include "BaseASN1.h"
 #include "ItcastLog.h"
 #include "SequenceASN1.h"
-#include "Codec.h"
-typedef struct _Teacher
-{
-	char name[64];
-	int age;
-	char *p;
-	long plen;
-}Teacher;
-
-int encodeTeacher(SequenceASN1 &seq,Teacher * p, char ** outData, int & outlen)//编码
-{
-	seq.writeHeadNode(p->p, strlen(p->p));
-	seq.writeNextNode(p->plen);
-	seq.writeNextNode(p->age);
-	seq.writeNextNode(p->name, strlen(p->name));
-	seq.packSequence(outData, outlen);// 数据关联 - 整个结构体数据块,编码整个结构体
-	return 0;
-}
-int decodeTeacher(SequenceASN1 &seq,char  * inData, int inLen, Teacher ** p)//解码
-{
-	seq.unpackSequence(inData, inLen);
-	Teacher* pt = (Teacher*)malloc(sizeof(Teacher));
-	seq.readHeadNode(&pt->p);
-	seq.readNextNode(pt->plen);
-	seq.readNextNode(pt->age);
-	seq.readNextNode(pt->name);
-	*p = pt;
-	return 0;
-}
+#include "RequestCodec.h"
+#include "RespondCodec.h"
+#include "RequestFactory.h"
+#include "RespondFactory.h"
+#include <iostream>
+using std::cout;
+using std::endl;
+//int		rv;				// 返回值
+//char	clientId[12];	// 客户端编号
+//char	serverId[12];	// 服务器编号
+//char	r2[64];			// 服务器端随机数
+//int		seckeyid;		// 对称密钥编号    keysn
 int main(void)
 {
-	SequenceASN1 seq;
-	Teacher tea;
-	strcpy(tea.name, "路飞");
-	tea.age = 20;
-	tea.p = (char*)malloc(100);
-	strcpy(tea.p, "我是要成为海贼王的男人");
-	tea.plen = strlen(tea.p);
-	//编码
-	char *outData = NULL;
-	int outlen;
-	encodeTeacher(seq, &tea, &outData, outlen);
-	//解码
-	Teacher* pt = NULL;
-	decodeTeacher(seq, outData, outlen, &pt);
-	printf("name:	%s\n", pt->name);
-	printf("age:	%d\n", pt->age);
-	printf("p:	%s\n", pt->p);
-	printf("plen:	%d\n", pt->plen);
+	//RespondMsg(char* clientID, char* serverID, char* r2, int rv, int seckeyID)
+	RespondMsg msg;
+	msg.seckeyid = 1;
+	msg.rv = 2;
+	strcpy(msg.clientId, "111");
+	strcpy(msg.r2, "222");
+	strcpy(msg.serverId, "333");
+
+	char *outData;
+	int len;
+	
+	CodecFactory *factory = new RespondFactory(&msg);
+	Codec* codec=factory->createCodec();
+	codec->msgEncode(&outData, len);
+	RespondMsg*temp=(RespondMsg*)codec->msgDecode(outData, len);
+	cout << "cmdType:\t" << temp->seckeyid<< endl;
+	cout << "cliendId:\t" << temp->rv << endl;
+	cout << "authCode:\t" << temp->clientId << endl;
+	cout << "serverId:\t" << temp->serverId << endl;
+	cout << "r1:\t\t" << temp->r2 << endl;
+
 	system("pause");
 	return 0;
 }
