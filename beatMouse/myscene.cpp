@@ -18,7 +18,7 @@ void myScene::showMouse()
 {
     //随机一个数字 0-15
     //1-3
-    int count=rand()%3+1;
+    int count=rand()%2+1;
     int i=0;
     for(i=0;i<16;i++)
     {
@@ -40,7 +40,7 @@ void myScene::startGame()
     {
         this->item[i]->setStart(true);
     }
-    this->ptimer->start(800);
+    this->ptimer->start(300);
 }
 
 void myScene::pauseGame()

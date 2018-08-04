@@ -7,6 +7,7 @@ MainWindow::MainWindow(QWidget *parent) :
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+    //this->ui->menuBar->setVisible(false);
     this->sc=new myScene;
     this->ui->graphicsView->setScene(sc);
     connect(this->ui->btn_start,SIGNAL(clicked(bool)),this->sc,SLOT(startGame()));
