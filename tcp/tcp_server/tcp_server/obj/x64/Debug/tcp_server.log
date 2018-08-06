@@ -1,0 +1,9 @@
+﻿  Validating architecture
+  Validating sources
+  Copying sources remotely to '192.168.42.133'
+  Starting remote build
+  Compiling sources:
+  main.cpp
+  TcpSocket.cpp
+  Linking objects
+  tcp_server.vcxproj -> D:\Users\Administrator\Desktop\项目1\项目1第5天\复习\tcp_server\tcp_server\bin\x64\Debug\tcp_server.out

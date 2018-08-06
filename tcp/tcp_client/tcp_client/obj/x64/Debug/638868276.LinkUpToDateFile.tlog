@@ -1,0 +1,1 @@
+g++ -o "/root/projects/tcp_client/bin/x64/Debug/tcp_client.out" -Wl,--no-undefined -Wl,-z,relro -Wl,-z,now -Wl,-z,noexecstack /root/projects/tcp_client/obj/x64/Debug/itcastlog.o /root/projects/tcp_client/obj/x64/Debug/main.o /root/projects/tcp_client/obj/x64/Debug/TcpSocket.o
